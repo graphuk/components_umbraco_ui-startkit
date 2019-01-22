@@ -1,0 +1,32 @@
+@import "../helpers/all";
+
+.guide {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	height: 100%;
+	z-index: 1000;
+	pointer-events: none;
+	padding: 0 @mobileSideSpace;
+
+	@media @desktop {
+		max-width: @contentWidth;
+		padding: 0 @desktopSideSpace;
+		margin: 0 auto;
+	}
+
+	.guide__container {
+		display: grid;
+		grid-template-columns: repeat(12, 1fr);
+		grid-gap: 30px;
+		width: 100%;
+		height: 100%;
+	}
+
+	.guide__column {
+		background: #cc00ff1f;
+		display: block;
+		height: 100%;
+	}
+}

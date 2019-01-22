@@ -1,0 +1,29 @@
+@{
+	const string siteName = "";
+	var title = ViewBag.Title;
+	var description = string.Empty;
+	var keywords = string.Empty;
+	var url = HttpContext.Current.Request.Url.AbsoluteUri;
+	var image  = string.Empty;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>@title</title>
+		<meta name="description" content="@description">
+		<meta name="keywords" content="@keywords">
+		<meta property="og:url" content="@url">
+		<meta property="og:title" content="@title">
+		<meta property="og:site_name" content="@siteName">
+		<meta property="og:description" content="@description">
+		<meta property="og:image" content="@image">
+		<link rel="stylesheet" href="/_/app.css"/>
+	</head>
+	<body>
+		@RenderBody()
+		<script async src="/_/app.js"></script>
+	</body>
+</html>
