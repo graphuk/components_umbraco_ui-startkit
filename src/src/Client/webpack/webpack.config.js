@@ -11,7 +11,7 @@ const root = path.resolve('./_');
 module.exports = function (env) {
 	return {
 		entry: {
-			app: './src/entries/app.js'
+			app: './src/Client/entries/app.js'
 		},
 
 		output: {
@@ -66,7 +66,7 @@ module.exports = function (env) {
 
 			plugins.push(
 				new WebappWebpackPlugin({
-					logo: './src/layout/favicon.png',
+					logo: './src/Client/layout/favicon.png',
 					inject: false,
 					cache: true,
 					prefix: 'icons/',
@@ -139,7 +139,7 @@ module.exports = function (env) {
 							loader: 'postcss-loader',
 							options: {
 								config: {
-									path: path.resolve('./src/webpack/postcss.config.js')
+									path: path.resolve('./src/Client/webpack/postcss.config.js')
 								}
 							}
 						}, {
