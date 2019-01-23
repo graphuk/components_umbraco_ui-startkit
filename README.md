@@ -2,18 +2,20 @@
 
 UI starter kit for Umbraco.
 
+This is kit will add webpack and eslint to the project for generate assets. 
+The assets will be generate in folder `_` in the root of the project.
+Also this kit contains the default layout for Ubraco templates.
+
 Installation steps:
-1. Copy the file '_Layout.cshtml' to ~\Views\Shared\
+1. Copy files in the root
 2. Include file ~\Views\Shared\_Layoyt.cshtml in your project
-3. Copy other files in the root of project
+3. Inherit ~\Views\Shared\_Layout.cshtm in you Layouts.
 4. add '_' to .gitignore
-5. npm i
-6. npm run build
-7. Inherit ~\Views\Shared\_Layout.cshtm in you Layouts.
+5. Insall node modules by `npm i` command
 
-In the root of project will be generated folder '_' with styles and scripts.
-
+To generate styles and scripts execude the command:
+`npm run build`
 
 Eslint command:
-npm run lin
-npm run lint:fix
+`npm run lint`
+`npm run lint:fix`
