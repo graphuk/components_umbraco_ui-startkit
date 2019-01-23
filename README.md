@@ -8,11 +8,11 @@ Also this kit contains the default layout for Ubraco templates.
 
 Installation steps:
 1. Copy files in the root
-2. Include file ~\Views\Shared\_Layoyt.cshtml in your project
-3. Inherit ~\Views\Shared\_Layout.cshtm in you Layouts.
+2. Include file src\Web\Views\Shared\_Layoyt.cshtml in your project
+3. Inherit src\Web\Views\Shared\_Layout.cshtm in you Layouts.
 4. add '_' to .gitignore
 5. Insall node modules by `npm i` command
-6. Replace image \src\layout\favicon.png with favicon for project
+6. Replace image \src\Client\layout\favicon.png with favicon for project
 
 To generate styles and scripts execude the command:
 `npm run build`
