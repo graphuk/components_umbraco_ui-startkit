@@ -4,13 +4,20 @@
   "author": "Graph <team@graph.uk>",
   "license": "ISC",
   "scripts": {
-    "lint": "eslint --cache --ext .js ./src/",
-    "lint:fix": "eslint --cache --ext .js ./src/ --fix",
+    "lint": "eslint --cache --ext .js ./src/ && eslint --cache --ext .js ./Web/App_Plugins",
+    "lint:fix": "eslint --cache --ext .js ./src/ --fix && eslint --cache --ext .js ./Web/App_Plugins --fix",
     "build": "webpack --mode production --env.production --config ./src/webpack/webpack.config.js",
     "build:dev": "webpack --mode production --env.development --config ./src/webpack/webpack.config.js",
     "watch": "npm run build:dev -- -w",
     "prepush": "npm run lint"
   },
+  "eslintConfig": {
+    "extends": "graph-base"
+  },
+  "eslintIgnore": [
+    "*resource.js",
+    "*controller.js"
+  ],
   "dependencies": {
     "autoprefixer": "^9.4.5",
     "clean-webpack-plugin": "^1.0.0",
