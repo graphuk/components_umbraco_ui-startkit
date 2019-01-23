@@ -6,7 +6,6 @@
 	var url = HttpContext.Current.Request.Url.AbsoluteUri;
 	var image  = string.Empty;
 }
-
 <!DOCTYPE html>
 <html lang="en">
 	<head>
@@ -15,11 +14,17 @@
 		<title>@title</title>
 		<meta name="description" content="@description">
 		<meta name="keywords" content="@keywords">
+
+		<link rel="apple-touch-icon" sizes="180x180" href="/_/icons/apple-touch-icon.png">
+		<link rel="icon" type="image/png" sizes="32x32" href="/_/icons/favicon-32x32.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="/_/icons/favicon-16x16.png">
+
 		<meta property="og:url" content="@url">
 		<meta property="og:title" content="@title">
 		<meta property="og:site_name" content="@siteName">
 		<meta property="og:description" content="@description">
 		<meta property="og:image" content="@image">
+
 		<link rel="stylesheet" href="/_/app.css"/>
 	</head>
 	<body>
