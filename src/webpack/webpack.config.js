@@ -4,7 +4,7 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const criticalSplit = require('postcss-critical-split');
 const csso = require('postcss-csso');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
-const FaviconsWebpackPlugin = require('favicons-webpack-plugin');
+const WebappWebpackPlugin = require('webapp-webpack-plugin')
 
 const root = path.resolve('./_');
 
@@ -65,22 +65,25 @@ module.exports = function (env) {
 			}
 
 			plugins.push(
-				new FaviconsWebpackPlugin({
+				new WebappWebpackPlugin({
 					logo: './src/layout/favicon.png',
 					inject: false,
+					cache: true,
 					prefix: 'icons/',
-					icons: {
-						android: false,
-						appleIcon: false,
-						appleStartup: false,
-						coast: false,
-						favicons: true,
-						firefox: false,
-						opengraph: false,
-						twitter: false,
-						yandex: false,
-						windows: false
-					  }
+					favicons: {
+						icons: {
+							favicons: true,
+							appleIcon: true,
+							android: false,
+							appleStartup: false,
+							coast: false,
+							firefox: false,
+							opengraph: false,
+							twitter: false,
+							yandex: false,
+							windows: false
+						}
+					}
 				})
 			);
 
