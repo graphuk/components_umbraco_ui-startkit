@@ -12,6 +12,7 @@ Installation steps:
 3. Inherit ~\Views\Shared\_Layout.cshtm in you Layouts.
 4. add '_' to .gitignore
 5. Insall node modules by `npm i` command
+6. Replace image \src\layout\favicon.png with favicon for project
 
 To generate styles and scripts execude the command:
 `npm run build`

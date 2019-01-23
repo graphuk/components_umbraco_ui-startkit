@@ -4,7 +4,7 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const criticalSplit = require('postcss-critical-split');
 const csso = require('postcss-csso');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
-const WebappWebpackPlugin = require('webapp-webpack-plugin')
+const WebappWebpackPlugin = require('webapp-webpack-plugin');
 
 const root = path.resolve('./_');
 
