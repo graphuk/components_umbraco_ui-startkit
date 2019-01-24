@@ -1,0 +1,14 @@
+@import "../helpers/all";
+
+/* critical:start */
+html {
+	line-height: @lineHeight;
+	font-family: @fontFamily;
+	font-size: @baseFontMobile;
+	font-weight: 400;
+
+	@media @desktop {
+		font-size: @baseFontDesktop;
+	}
+}
+/* critical:end */

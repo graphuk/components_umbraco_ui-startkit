@@ -1,0 +1,29 @@
+.clearfix() {
+	&:after {
+		content: "";
+		display: table;
+		clear: both;
+	}
+}
+.underline(@color: black, @alpha: 0.6) {
+	text-decoration: none;
+	background-image: linear-gradient(
+		to bottom,
+		rgba(red(@color),green(@color),blue(@color), 0) 50%,
+		rgba(red(@color),green(@color),blue(@color), @alpha) 50%
+	);
+	background-repeat: repeat-x;
+	background-size: 2px 2px;
+	background-position: 0 1em;
+}
+
+.visuallyhidden() {
+	position: absolute;
+	overflow: hidden;
+	clip: rect(0 0 0 0);
+	height: 1px;
+	width: 1px;
+	margin: -1px;
+	padding: 0;
+	border: 0;
+}
