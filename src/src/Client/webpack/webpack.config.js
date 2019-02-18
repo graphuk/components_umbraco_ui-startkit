@@ -30,17 +30,17 @@ module.exports = function (env) {
 				})
 			);
 
-			plugins.push(
-				new CleanWebpackPlugin(
-					['app.*.js', 'styles.*.css*', 'fonts'],
-					{
-						root,
-						watch: true
-					}
-				)
-			);
-
 			if (env.production) {
+				plugins.push(
+					new CleanWebpackPlugin(
+						['app.*.js', 'styles.*.css*', 'fonts'],
+						{
+							root,
+							watch: true
+						}
+					)
+				);
+
 				plugins.push(
 					new PostCssPipelineWebpackPlugin({
 						suffix: 'critical',
