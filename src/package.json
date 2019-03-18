@@ -4,6 +4,8 @@
   "author": "Graph <team@graph.uk>",
   "license": "ISC",
   "scripts": {
+    "stylelint": "stylelint \"./src/Client/**/*.less\", \"./src/Web/App_Plugins/**/*.less\" --config ./src/Client/configs/stylelint.json",
+    "stylelint:fix": "stylelint \"./src/Client/components/**/*.less\", \"./src/Web/App_Plugins/**/*.less\" --config ./src/Client/configs/stylelint.json --fix",
     "lint": "eslint --cache --ext .js ./src/Client/ && eslint --cache --ext .js ./src/Web/App_Plugins",
     "lint:fix": "eslint --cache --ext .js ./src/Client/ --fix && eslint --cache --ext .js ./src/Web/App_Plugins --fix",
     "build": "webpack --mode production --env.production --config ./src/Client/webpack/webpack.config.js",
@@ -42,9 +44,9 @@
     "postcss-pipeline-webpack-plugin": "^4.1.0",
     "url-loader": "^1.1.2",
     "webpack": "^4.29.0",
-    "webpack-cli": "^3.2.1"
-  },
-  "devDependencies": {
-    "webapp-webpack-plugin": "^2.5.0"
+    "webpack-cli": "^3.2.1",
+    "webapp-webpack-plugin": "^2.5.0",
+    "stylelint": "^9.10.1",
+    "stylelint-config-standard": "^18.2.0"
   }
 }
